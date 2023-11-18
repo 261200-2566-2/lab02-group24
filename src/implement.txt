@@ -1,3 +1,5 @@
+Implementation of air purifier
+
 Instance variables:
 	model: ชื่อ model
     serial_no: เลข serial number
