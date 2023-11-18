@@ -1,0 +1,50 @@
+Instance variables:
+	model: ชื่อ model
+    serial_no: เลข serial number
+    room_size: ขนาดของห้องที่ออกแบบไว้(ลบ.ม.)
+	filter_type: ชนิดของ filter
+	sensor_type: ชนิดของ sensor
+	monitor_type: ชนิดของ monitor
+	powered_on: สถาณะของเครื่องฟอกอากาศ (On/Off)
+Instance methods:
+	turn_on(): เปิดเครื่องฟอกอากาศ
+	turn_off(): ปิดเครื่องฟอกอากาศ
+	is_powered_on(): เช็คเครื่องฟอกอากาศว่ากำลังเปิดอยู่หรือไม่
+
+Class variable:
+	manufacturer: ชื่อผู้ผลิตของเครื่องฟอกอากาศในทุก instances
+
+Class method:
+	set_default_manufacturer(new_manufacturer): set ชื่อผู้ผลิตของเครื่องฟอกอากาศใหม่ในทุก instances
+
+
+
+overview methods:
+
+    turn_on():
+        Input: ไม่มี
+        Computation:
+            -เช็คว่า เครื่องฟอกอากาศ กำลังปิดอยู่หรือไม่
+    	    -ถ้ากำลังปิดอยู่ จะทำการ print ข้อความว่าทำการเปิดเครื่องฟอกอากาศ และ set ให้ powered_on = true
+    	    -แต่ หากเครื่องฟอกอากาศกำลังเปิดอยู่ ให้ print ข้อความบอกว่าเครื่องฟอกอากาศเครื่องนี้เปิดอยู่แล้ว
+        Return: ไม่มี
+
+    turn_off():
+        Input: ไม่มี
+        Computation:
+            -เช็คว่า เครื่องฟอกอากาศ กำลังเปิดอยู่หรือไม่
+    	    -ถ้ากำลังเปิดอยู่ จะทำการ print ข้อความว่าทำการปิดเครื่องฟอกอากาศ และ set ให้ powered_on = false
+    	    -แต่ หากเครื่องฟอกอากาศกำลังปิดอยู่ ให้ print ข้อความบอกว่าเครื่องฟอกอากาศเครื่องนี้ปิดอยู่แล้ว
+        Return: ไม่มี
+
+    is_powered_on():
+        Input: ไม่มี
+        Computation: return ค่าของ boolean powered_on ของ instance นี้ว่าเปิดอยู่หรือไม่
+        Return: ค่า boolean powered_on(true เมื่อเปิด, false เมื่อปิด)
+
+    set_default_manufacturer(new_manufacturer):
+        Input: new_manufacturer ชื่อของผู้ผลิตที่จะทำการ set ไปทุก instances ของ class
+        Computation:
+            -set ค่า class variable manufacturer เป็นค่าของ new_manufacturer
+            -print ข้อความว่าเปลี่ยน manufacturer เป็น new_manufacturer แล้ว
+        Return: ค่า boolean (true เมื่อเปิด, false เมื่อปิด)
