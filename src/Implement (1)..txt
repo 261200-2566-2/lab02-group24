@@ -1,0 +1,37 @@
+Instance variables:
+	model: model
+    room_size: ขนาดของห้องที่ออกแบบใว้
+	filter: filter_type
+	sensor: sensor_Type
+	monitor: monitor_Type
+	powered_on: On/Off
+Instance methods:
+	turn_on(): เปิดเครื่องฟอกอากาศ
+	turn_off(): ปิดเครื่องฟอกอากาศ
+	is_powered_on(): แสดงว่าเครื่องฟอกอากาศกำลังเปิดหรือปิด
+	
+
+Class variable:
+	manufacturer: ใช้แสดงผู้ผลิตของเครื่องฟอกอากาศทั้งหมดทุก instances
+
+Class method:
+	set_default_manufacturer(new_manufacturer): เซ็ตชื่อผู้ผลิต
+
+overview methods:
+	
+turn_on(){ : เป็น void เงื่อนไข
+	ถ้า poweredOn ไม่เปิิดจะทำการ println ออกมาว่า model(รุ่นใดๆ) ให้ เปิด
+	set ให้ poweredOn = true
+	แต่ หาก poweredOn เปิดอยู่แล้วจะทำการ println ออกมาว่า model(รุ่นใดๆ) เปิดอยู่แล้ว
+}
+
+turn_off(){ : เป็น void เงื่อนไข
+	ถ้า poweredOn จะทำการ println ออกมาว่า model(รุ่นใดๆ) ให้ ปิด
+	set ให้ poweredOn = false
+	แต่ หาก poweredOn ปิดอยู่แล้วจะทำการ println ออกมาว่า model(รุ่นใดๆ) ปิดอยู่แล้ว
+}
+
+is_powered_on(boolean){ : รับค่าเป็น boolean ทำการ return เรียกใช้poweredOnมาจากclass 
+	return poweredOn;
+}
+
